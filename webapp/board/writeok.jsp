@@ -32,26 +32,6 @@
 	<script>history.go(-1);</script>
 </c:if>
 
-<c:forEach var="row" items="${rs.rows}">
-	<c:if test="${ row.cnt gt 0 }">
-	  <c:set var="userid" value="${param.userid}"
-					 scope="session" />
-  <script>location.href='list.jsp';</script>
-</c:if>
-
 
 
  
-</c:forEach>   
-         
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>입력처리 결과</title>
-</head>
-<body>
-<h1>입력처리 결과</h1>
-
-</body>
-</html>

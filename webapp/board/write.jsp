@@ -59,7 +59,7 @@
 	
 	<script>
 	
-		var frm = document.getElementById('writebtn');
+		var writebtn = document.getElementById('writebtn');
 		writebtn.addEventListener('click', writeok);
 		
 		function writeok(){
@@ -79,5 +79,4 @@
 	</script>
 	
 </body>
-</html>
 </html>
