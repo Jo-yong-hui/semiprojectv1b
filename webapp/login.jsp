@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!doctype html>
 <html lang = "ko">
     <head>
@@ -28,7 +29,7 @@
       <div id = "container">
         <h2>로그인</h2>
         <form name ="loginfrm" id = "loginfrm" method = "post">
-         <!--fomr을 해줘야 입력칸표가 가운데로 감 -->
+     
             <div><label for = "userid">아이디</label>
             <input type = "text" name = "userid" id = "userid">
             </div>
@@ -37,7 +38,7 @@
             <input type = "text" name ="passwd" id = "passwd">
             </div>
 
-            <div><button type ="button">로그인</button></div>
+            <div><button type ="button" id="loginbtn">로그인</button></div>
         </form>
 
     </div>
@@ -45,5 +46,24 @@
     <%@ include file="/layout/footer.jsp" %>
   
     </div>
+    
+    <script>
+    	var loginbtn = document.getElementById('loginbtn');
+			loginbtn.addEventListener('click',loginok);
+			
+		function loginok() {
+			var frm = document.getElementById('loginfrm');
+			if (frm.userid.value == '')
+				alert('아이디를 입력하세요!');
+			else if (frm.passwd.value == '')
+				alert('비밀번호를 입력하세요!');
+			else{
+			   frm.action = 'loginok.jsp';
+			   frm.submit();
+				
+			}
+				
+		}
+    </script>
 </body>
 </html>
